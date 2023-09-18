@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './app.css'
 import logo_twitch from './img/twitch.svg'
 import logo_youtube from './img/youtube.svg'
 import logo_github from './img/github.svg'
