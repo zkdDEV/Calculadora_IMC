@@ -1,5 +1,11 @@
 import { useState } from 'react'
 import './app.css'
+import logo_twitch from './img/twitch.svg'
+import logo_youtube from './img/youtube.svg'
+import logo_github from './img/github.svg'
+import Pesquisa from './components/Pesquisa'
+import Estudar from './components/Estudar'
+import Rodape from './components/Rodape'
 
 function App() {
 
@@ -104,141 +110,13 @@ function App() {
   return (
     <>
       <div className="pesquisa">
-        <header>
-          <h1>Calculadora de IMC</h1>
-        </header>
-        <form>
-          <div>
-            <label htmlFor="peso">Seu Peso(KG)</label>
-            <input onBlur={evento => setPeso(parseFloat(evento.target.value))} type="number" id="peso"/>
-          </div>
-          <div>
-            <label htmlFor="altura">Sua Altura(M)</label>
-            <input onBlur={evento => setAltura(parseFloat(evento.target.value))} type="number" id="altura"/>
-          </div>
-          <div>
-            <button onClick={() => fazConta()} type='button'>Calcular</button>
-          </div>
-        </form>
-        <div className="resposta">
-          {retornoDaReposta()}
-        </div>
+        <Pesquisa peso={evento => setPeso(parseFloat(evento.target.value))} altura={evento => setAltura(parseFloat(evento.target.value))} fazConta={fazConta} retornaResposta={retornoDaReposta()} />
       </div>
       <div className="estudar">
-        <table>
-          <thead>
-            <tr>
-              <th>
-                IMC
-              </th>
-              <th>
-                Categoria
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className='BPG1'>
-                Menos de 16
-              </td>
-              <td className='BPG1'>
-                Baixo peso (grau I)
-              </td>
-            </tr>
-            <tr>
-              <td className='BPG2'>
-                Entre 16 e 16,99
-              </td>
-              <td className='BPG2'>
-                Baixo peso (grau II)
-              </td>
-            </tr>
-            <tr>
-              <td className='BPG3'>
-                Entre 17 e 18,49
-              </td>
-              <td className='BPG3'>
-                Baixo peso (grau III)
-              </td>
-            </tr>
-            <tr>
-              <td className='Normal'>
-                Entre 18,50 e 24,99
-              </td>
-              <td className='Normal'>
-                Peso adequado
-              </td>
-            </tr>
-            <tr>
-              <td className='Sobrepeso'>
-                Entre 25 e 29,99
-              </td>
-              <td className='Sobrepeso'>
-                Sobrepeso
-              </td>
-            </tr>
-            <tr>
-              <td className='OBG1'>
-                Entre 30 e 34,99
-              </td>
-              <td className='OBG1'>
-                Obesidade (grau I)
-              </td>
-            </tr>
-            <tr>
-              <td className='OBG2'>
-                Entre 35 e 39,99
-              </td>
-              <td className='OBG2'>
-                Obesidade (grau I)
-              </td>
-            </tr>
-            <tr>
-              <td className='OBG3'>
-                A partir de 40
-              </td>
-              <td className='OBG3'>
-                Obesidade (grau I)
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div className='explicacao'>
-          <h3>
-            Para que serve a tabela do IMC?
-          </h3>
-          <p>
-            A tabela do Índice de Massa Corporal (IMC)
-            é uma ferramenta utilizada para avaliar se
-            uma pessoa está dentro de um intervalo de peso
-            considerado saudável para sua altura. Ela ajuda a
-            identificar se um indivíduo está abaixo do peso, dentro
-            do peso normal, com sobrepeso ou obeso. O cálculo do IMC
-            é feito dividindo o peso (em quilogramas) pela altura ao
-            quadrado (em metros). Com base nesse valor, a pessoa é
-            classificada conforme a tabela ao lado.
-          </p>
-        </div>
+        <Estudar/>
       </div>
       <footer>
-        <div className="copyright">
-          <p>
-            &copy; Copyright IMC - Calculadora 2023 - Todos os direitos reservados
-          </p>
-        </div>
-        <div className='links'>
-          <ul>
-            <li>
-              <a href="https://www.twitch.tv/zkdpro"><img src="./img/twitch.svg" alt="Twitch" /></a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/@zkdpro"><img src="./img/youtube.svg" alt="Youtube" /></a>
-            </li>
-            <li>
-              <a href="https://github.com/zkdDEV"><img src="./img/github.svg" alt="GitHub" /></a>
-            </li>
-          </ul>
-        </div>
+        <Rodape twitch={logo_twitch} youtube={logo_youtube} github={logo_github}/>
       </footer>
     </>
   )

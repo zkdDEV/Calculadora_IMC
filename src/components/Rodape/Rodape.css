@@ -1,0 +1,27 @@
+footer
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0;
+    background-color: #2f3640;
+}
+ul
+{
+    display: flex;
+    list-style: none;
+}
+li
+{
+    padding-left: 12px;
+}
+img
+{
+    transition: all 0.3s ease;
+    transform: scale(1.);
+}
+img:hover
+{
+    transition: all 0.3s ease;
+    transform: scale(1.3);
+}

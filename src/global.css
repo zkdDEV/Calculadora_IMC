@@ -6,3 +6,47 @@
     font-family: sans-serif;
     color: white;
 }
+.pesquisa
+{
+    background-color: #2f3640;
+}
+.estudar
+{
+    background-color:#353b48 ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 40px 120px;
+}
+.BPG1
+{
+    color: #3498db;
+}
+.BPG2
+{
+    color: #2980b9;
+}
+.BPG3
+{
+    color: #2ecc71;
+}
+.Normal
+{
+    color: #27ae60;
+}
+.Sobrepeso
+{
+    color: #f1c40f;
+}
+.OBG1
+{
+    color: #e67e22;
+}
+.OBG2
+{
+    color: #d35400;
+}
+.OBG3
+{
+    color: #c0392b;
+}
