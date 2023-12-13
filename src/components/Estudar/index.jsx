@@ -68,7 +68,7 @@ const Estudar = () => {
                             Entre 35 e 39,99
                         </td>
                         <td className='OBG2'>
-                            Obesidade (grau I)
+                            Obesidade (grau II)
                         </td>
                     </tr>
                     <tr>
@@ -76,7 +76,7 @@ const Estudar = () => {
                             A partir de 40
                         </td>
                         <td className='OBG3'>
-                            Obesidade (grau I)
+                            Obesidade (grau III)
                         </td>
                     </tr>
                 </tbody>
